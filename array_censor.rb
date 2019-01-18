@@ -7,13 +7,18 @@ test_tweets = [
 
 banned_phrases = ["sucks", "bad", "hate", "foolish", "danger to society"]
 
-censored_tweets = []
+censored_tweets = test_tweets
 
-
-test_tweets.each { |string|
-  string.to_s.split.each { |dave| }
-
+censored_tweets.each { |dave|
+  if dave.is_a? Integer
+    puts dave
+  end
 }
 
+banned_phrases.each { |banned|
+  if censored_tweets[0].include? banned
+    censored_tweets[0] = "CENSORED"
+  end
+}
 
-puts test_tweets[0].to_s.split.join("X")
+puts censored_tweets
