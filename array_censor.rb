@@ -9,7 +9,11 @@ banned_phrases = ["sucks", "bad", "hate", "foolish", "danger to society"]
 
 censored_tweets = []
 
-test_tweets.each { |array|
-  array.each { |word| puts word }
+
+test_tweets.each { |string|
+  string.to_s.split.each { |dave| }
 
 }
+
+
+puts test_tweets[0].to_s.split.join("X")
