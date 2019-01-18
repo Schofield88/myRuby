@@ -17,7 +17,7 @@ censored_tweets.each { |dave|
 
 banned_phrases.each { |banned|
   if censored_tweets[0].include? banned
-    censored_tweets[0] = "CENSORED"
+    censored_tweets[0].gsub!(banned, "CENSORED")
   end
 }
 
