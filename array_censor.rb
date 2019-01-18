@@ -9,20 +9,11 @@ banned_phrases = ["sucks", "bad", "hate", "foolish", "danger to society"]
 
 censored_tweets = test_tweets
 
-banned_phrases.each { |banned|
-  if censored_tweets[3].include? banned
-    censored_tweets[3].gsub!(banned, "CENSORED")
-  end
-}
-
-
-
 censored_tweets.each { |string|
   banned_phrases.each { |banned|
     if string.include? banned
       string.gsub!(banned, "CENSORED")
     end }
-
 }
 
 puts censored_tweets
